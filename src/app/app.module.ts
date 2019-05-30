@@ -9,12 +9,15 @@ import { AppComponent } from './app.component';
 
 import { MDBSpinningPreloader, MDBBootstrapModulesPro, ToastModule } from 'ng-uikit-pro-standard';
 import { MdbTakiModule } from './mdb-taki.module';
-import { CardsComponent } from './components/cards/cards.component';
+import { CardsComponent } from './components/Inicio/cards/cards.component';
+import { AppRoutingModule } from './app-routing.module';
+import { CarrouselComponent } from './components/inicio/carrousel/carrousel.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CardsComponent
+    CardsComponent,
+    CarrouselComponent,
   ],
   imports: [
     BrowserModule,
@@ -25,10 +28,10 @@ import { CardsComponent } from './components/cards/cards.component';
     ToastModule.forRoot(),
     MDBBootstrapModulesPro.forRoot(),
     AgmCoreModule.forRoot({
-      // https://developers.google.com/maps/documentation/javascript/get-api-key?hl=en#key
       apiKey: 'Your_api_key'
     }),
-    MdbTakiModule
+    MdbTakiModule,
+    AppRoutingModule
   ],
   providers: [MDBSpinningPreloader],
   bootstrap: [AppComponent],

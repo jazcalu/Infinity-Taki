@@ -5,7 +5,6 @@
 ```js
 getAllLinksImg() {
   // Get ->  Todas las urls de imagenes de la base de datos
-  // Math.ramdon() * 3
 }
 ```
 2.Cards de Inicio
@@ -19,7 +18,6 @@ getAllLinksVideosxxx() {
 ```js
 getAllDataConcerts() {
   //Get todas las fechas
-  //Seleccionar
 }
 
 ```
@@ -47,8 +45,7 @@ registerUsuario(){
 
 ```js
 sectionNews(){
-  // Create y Post
-  // funcion GetAll
+  // Post y Get
 }
 ```
 7. Subir Cancion
