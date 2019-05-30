@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 // For MDB Angular Pro
-import { SidenavModule, NavbarModule, WavesModule, AccordionModule } from 'ng-uikit-pro-standard'
-
+import { SidenavModule, NavbarModule, WavesModule, AccordionModule } from 'ng-uikit-pro-standard';
 @NgModule({
   declarations: [],
   imports: [

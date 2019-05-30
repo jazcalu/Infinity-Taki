@@ -20,6 +20,7 @@ import { CardsComponent } from './components/cards/cards.component';
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
+// tslint:disable-next-line: deprecation
     HttpModule,
     ToastModule.forRoot(),
     MDBBootstrapModulesPro.forRoot(),
