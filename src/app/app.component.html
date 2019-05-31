@@ -7,7 +7,8 @@
             <!-- Logo -->
             <li>
                 <div class="logo-wrapper waves-light">
-                    <a href="#"><img src="https://mdbootstrap.com/img/logo/mdb-transparent.png" class="img-fluid flex-center"></a>
+                    <a href="#"><img src="https://mdbootstrap.com/img/logo/mdb-transparent.png"
+                            class="img-fluid flex-center"></a>
                 </div>
             </li>
             <!--/. Logo -->
@@ -40,7 +41,8 @@
 
                         <!-- Collapsible link -->
                         <mdb-accordion-item>
-                            <mdb-accordion-item-head mdbWavesEffect><i class="fas fa-chevron-right"></i> Collapsible menu
+                            <mdb-accordion-item-head mdbWavesEffect><i class="fas fa-chevron-right"></i> Collapsible
+                                menu
                             </mdb-accordion-item-head>
                             <mdb-accordion-item-body>
                                 <ul>
@@ -71,7 +73,8 @@
 
                         <!-- Simple link -->
                         <mdb-accordion-item class="no-collase">
-                            <mdb-accordion-item-head mdbWavesEffect><i class="far fa-gem"></i> Simple link 2</mdb-accordion-item-head>
+                            <mdb-accordion-item-head mdbWavesEffect><i class="far fa-gem"></i> Simple link 2
+                            </mdb-accordion-item-head>
                             <mdb-accordion-item-body></mdb-accordion-item-body>
                         </mdb-accordion-item>
 
@@ -85,7 +88,8 @@
     <!--/. Sidebar navigation -->
 
     <!-- Navbar -->
-    <mdb-navbar SideClass="navbar fixed-top navbar-toggleable-md navbar-expand-lg scrolling-navbar double-nav" [containerInside]="false">
+    <mdb-navbar SideClass="navbar fixed-top navbar-toggleable-md navbar-expand-lg scrolling-navbar double-nav"
+        [containerInside]="false">
 
         <navlinks class="navbar-container">
             <!-- SideNav slide-out button -->
@@ -107,20 +111,20 @@
             <ul class="nav navbar-nav nav-flex-icons ml-auto ie-double-nav">
                 <li class="nav-item">
                     <a class="nav-link waves-light" mdbWavesEffect><i class="fas fa-envelope"></i> <span
-            class="clearfix d-none d-sm-inline-block">Contact</span></a>
+                            class="clearfix d-none d-sm-inline-block">Contact</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link waves-light" mdbWavesEffect><i class="far fa-comments"></i> <span
-            class="clearfix d-none d-sm-inline-block">Support</span></a>
+                            class="clearfix d-none d-sm-inline-block">Support</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link waves-light" mdbWavesEffect><i class="fas fa-user"></i> <span
-            class="clearfix d-none d-sm-inline-block">Account</span></a>
+                            class="clearfix d-none d-sm-inline-block">Account</span></a>
                 </li>
                 <li class="nav-item dropdown btn-group" dropdown>
                     <a dropdownToggle type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
-            Dropdown
-          </a>
+                        Dropdown
+                    </a>
                     <div class="dropdown-menu dropdown-primary dropdown-menu-right" role="menu">
                         <a class="dropdown-item" href="#">Action</a>
                         <a class="dropdown-item" href="#">Another action</a>
@@ -142,8 +146,14 @@
         <br>
         <h5>1. Hidden side menu. Click "hamburger" icon in the top left corner to open it.</h5>
         <h5>2. Fixed navbar. It will always stay visible on the top, even when you scroll down.</h5>
-        <div style="height: 2000px"></div>
+        <div style="height: 300px"></div>
     </div>
 </main>
 <!--/Main layout-->
-<router-outlet></router-outlet>
+<router-outlet>
+        <app-main-page></app-main-page>
+</router-outlet>
+<br>
+<app-register></app-register>
+<app-file-upload></app-file-upload>
+<app-page-not-found></app-page-not-found>

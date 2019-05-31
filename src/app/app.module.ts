@@ -28,9 +28,9 @@ import { CoverComponent } from './components/profile/cover/cover.component';
 import { ReviewsComponent } from './components/profile/reviews/reviews.component';
 import { PlaylistComponent } from './components/profile/playlist/playlist.component';
 import { ArtistNewsComponent } from './components/profile/artist-news/artist-news.component';
-import { UploadComponent } from './components/upload/upload.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { AppRoutingModule } from './app-routing.module';
+import { FileUploadComponent } from './components/file-upload/file-upload.component';
 
 
 @NgModule({
@@ -56,8 +56,8 @@ import { AppRoutingModule } from './app-routing.module';
     ReviewsComponent,
     PlaylistComponent,
     ArtistNewsComponent,
-    UploadComponent,
     PageNotFoundComponent,
+    FileUploadComponent,
 
   ],
   imports: [

@@ -1,3 +1,74 @@
-<p>
-  register works!
-</p>
+
+<div class="row d-flex justify-content-center">
+
+    <!--Grid column-->
+    <div class="col-lg-5 my-4" >
+
+        <!--Form with header-->
+        <mdb-card>
+
+            <mdb-card-body>
+                <!--Header-->
+                <div class="form-header cyan accent-5">
+                    <h3>
+                        <i class='fas fa-user mr-1'></i>Regístrate</h3>
+                </div>
+
+                <p style="font-size: 14px">Sé parte de la comunidad peruana de artistas independientes</p>
+                <br>
+
+                <!--Body-->
+                <div class="md-form">
+                    <i class="fas fa-user prefix grey-text"></i>
+                    <input mdbInput type="text" id="form3" class="form-control">
+                    <label data-error="wrong" data-success="right" for="form3">Tu nombre</label>
+                </div>
+
+                <div class="md-form">
+                    <i class="fas fa-envelope prefix grey-text"></i>
+                    <input mdbInput type="text" id="form2" class="form-control">
+                    <label data-error="wrong" data-success="right" for="form2">Tu email</label>
+                </div>
+
+                <div class="md-form form-sm">
+                    <i class="fas fa-lock prefix"></i>
+                    <input mdbInput type="password" id="form25" class="form-control">
+                    <!-- <input mdbInput type="password" id="form25" class="form-control" [formControl]="modalFormRegisterPassword"> -->
+                    <label data-error="wrong" data-success="right" for="form25">Tu password</label>
+                </div>
+
+                <div class="md-form form-sm">
+                    <i class="fas fa-lock prefix"></i>
+                    <input mdbInput type="password" id="form26" class="form-control">
+                    <!-- <input mdbInput type="password" id="form26" class="form-control" [formControl]="modalFormRegisterRepeatPassword"> -->
+                    <label data-error="wrong" data-success="right" for="form26">Repite tu password</label>
+                    <div class="form-group mt-4">
+                        <input class="form-check-input" type="checkbox" id="checkbox624">
+                        <label for="checkbox624" class="form-check-label cyan-text">Acepto
+                            <a href="#" class="cyan-text font-weight-bold"> los Terminos y Condiciones</a>
+                        </label>
+                    </div>
+                </div>
+                <div>
+                    <p style="text-align: center">ó Registrate iniciando sesión en:</p>
+                    <div class="row my-3 d-flex justify-content-center">
+                        <!--Facebook-->
+                        <a type="button" mdbBtn floating="true" size="lg" class="btn-fb waves-light" mdbWavesEffect><i
+                                class="fab fa-facebook-f"></i></a>
+                        <!--Google-->
+                        <a type="button" mdbBtn floating="true" size="lg" class=" btn-gplus waves-light"
+                            mdbWavesEffect><i class="fab fa-google-plus"></i></a>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <button mdbBtn class="waves-light" rounded="true" mdbWavesEffect style="background-color:#0BE9B6; color: white">Registrar</button>
+                </div>
+
+            </mdb-card-body>
+
+        </mdb-card>
+        <!--Form with header-->
+
+    </div>
+    <!--Grid column-->
