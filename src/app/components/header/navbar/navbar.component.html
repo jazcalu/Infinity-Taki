@@ -2,33 +2,85 @@
 <header>
 
   <!-- Sidebar -->
-  <mdb-side-nav #sidenav class="sidebar-fixed position-fixed" [fixed]="true" >
-      <a class="logo-wrapper waves-effect">
-          <img src="../../../../assets/img/angular-mdb.png" class="img-fluid" alt="">
-      </a>
+  <mdb-side-nav #sidenav class="sidebar-fixed position-fixed" [fixed]="true">
+    <a class="logo-wrapper waves-effect">
+      <img src="../../../../assets/img/angular-mdb.png" class="img-fluid" alt="">
+    </a>
 
-      <div class="list-group list-group-flush">
+    <li>
+      <ul class="collapsible collapsible-accordion">
+        <mdb-accordion [multiple]="false" aria-multiselectable="false">
 
-          <a routerLink="dashboards/v1" routerLinkActive="active" class="list-group-item list-group-item-action waves-effect">
-              <mdb-icon fas icon="chart-pie" class="mr-3"></mdb-icon>Dashboard
-          </a>
-          <a routerLink="profiles/profile1" routerLinkActive="active" class="list-group-item list-group-item-action waves-effect">
-              <mdb-icon fas icon="user" class="mr-3"></mdb-icon>Profile</a>
-          <a routerLink="tables/table1" routerLinkActive="active" class="list-group-item list-group-item-action waves-effect">
-              <mdb-icon fas icon="table" class="mr-3"></mdb-icon>Tables</a>
-          <a routerLink="maps/map1" routerLinkActive="active" class="list-group-item list-group-item-action waves-effect">
-              <mdb-icon far icon="map" class="mr-3"></mdb-icon>Maps</a>
-          <a routerLink="nonExistingPath" routerLinkActive="active" class="list-group-item list-group-item-action waves-effect">
-              <mdb-icon fas icon="exclamation" class="mr-3"></mdb-icon>404</a>
+          <!-- Simple link -->
+          <mdb-accordion-item class="no-collase">
+            <mdb-accordion-item-head mdbWavesEffect>
+              <i class="far fa-hand-pointer"></i> Menu Principal
+            </mdb-accordion-item-head>
+            <mdb-accordion-item-body></mdb-accordion-item-body>
+          </mdb-accordion-item>
 
-      </div>
+          <!-- Simple link -->
+          <mdb-accordion-item class="no-collase">
+            <mdb-accordion-item-head mdbWavesEffect>
+              <i class="far fa-hand-pointer"></i> Inicio
+            </mdb-accordion-item-head>
+            <mdb-accordion-item-body></mdb-accordion-item-body>
+          </mdb-accordion-item>
+
+          <!-- Simple link -->
+          <mdb-accordion-item class="no-collase">
+            <mdb-accordion-item-head mdbWavesEffect>
+              <i class="far fa-hand-pointer"></i> Noticias
+            </mdb-accordion-item-head>
+            <mdb-accordion-item-body></mdb-accordion-item-body>
+          </mdb-accordion-item>
+
+          <!-- Simple link -->
+          <mdb-accordion-item class="no-collase">
+            <mdb-accordion-item-head mdbWavesEffect>
+              <i class="far fa-gem"></i> Lo mas Top
+            </mdb-accordion-item-head>
+            <mdb-accordion-item-body></mdb-accordion-item-body>
+          </mdb-accordion-item>
+        <!-- Simple link -->
+        <mdb-accordion-item class="no-collase">
+            <mdb-accordion-item-head mdbWavesEffect>
+              <i class="far fa-gem"></i> Usuario
+            </mdb-accordion-item-head>
+            <mdb-accordion-item-body></mdb-accordion-item-body>
+          </mdb-accordion-item>
+        <!-- Simple link -->
+        <mdb-accordion-item class="no-collase">
+            <mdb-accordion-item-head mdbWavesEffect>
+              <i class="far fa-gem"></i> Perfil
+            </mdb-accordion-item-head>
+            <mdb-accordion-item-body></mdb-accordion-item-body>
+          </mdb-accordion-item>
+        <!-- Simple link -->
+        <mdb-accordion-item class="no-collase">
+            <mdb-accordion-item-head mdbWavesEffect>
+              <i class="far fa-gem"></i> Subir cancion
+            </mdb-accordion-item-head>
+            <mdb-accordion-item-body></mdb-accordion-item-body>
+          </mdb-accordion-item>
+        <!-- Simple link -->
+        <mdb-accordion-item class="no-collase">
+            <mdb-accordion-item-head mdbWavesEffect>
+              <i class="far fa-gem"></i> Cerrar Sesion
+            </mdb-accordion-item-head>
+            <mdb-accordion-item-body></mdb-accordion-item-body>
+          </mdb-accordion-item>
+
+        </mdb-accordion>
+      </ul>
+    </li>
 
   </mdb-side-nav>
   <!-- Sidebar -->
 
   <!-- Navbar -->
   <mdb-navbar SideClass="navbar fixed-top navbar-toggleable-md navbar-expand-lg scrolling-navbar double-nav"
-              [containerInside]="false">
+    [containerInside]="false">
 
     <navlinks class="navbar-container">
       <!-- SideNav slide-out button -->
@@ -49,26 +101,10 @@
     <navlinks>
       <ul class="nav navbar-nav nav-flex-icons ml-auto ie-double-nav">
         <li class="nav-item">
-          <a class="nav-link waves-light" mdbWavesEffect><i class="fas fa-envelope"></i> <span
-            class="clearfix d-none d-sm-inline-block">Contact</span></a>
+          <app-login></app-login>
         </li>
         <li class="nav-item">
-          <a class="nav-link waves-light" mdbWavesEffect><i class="far fa-comments"></i> <span
-            class="clearfix d-none d-sm-inline-block">Support</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link waves-light" mdbWavesEffect><i class="fas fa-user"></i> <span
-            class="clearfix d-none d-sm-inline-block">Account</span></a>
-        </li>
-        <li class="nav-item dropdown btn-group" dropdown>
-          <a dropdownToggle type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
-            Dropdown
-          </a>
-          <div class="dropdown-menu dropdown-primary dropdown-menu-right" role="menu">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
+          <app-login></app-login>
         </li>
       </ul>
     </navlinks>
