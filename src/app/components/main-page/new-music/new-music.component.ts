@@ -8,17 +8,16 @@ import {AfterViewInit, Component, OnInit, Renderer2} from '@angular/core';
 export class NewMusicComponent implements OnInit {
 
   cards = [
-    { img: './../../assets/img/card1.jpg' },
-    { img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg' },
-    { img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg' },
-    { img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg' },
-    { img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg' },
-    { img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg' },
-    { img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg' },
-    { img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg' },
-    { img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg' },
+    { img: './../../assets/img/card301.jpg' },
+    { img: './../../assets/img/card332.jpg' },
+    { img: './../../assets/img/card242.jpg' },
+    { img: './../../assets/img/card132.jpg' },
+    { img: './../../assets/img/card152.jpg' },
+    { img: './../../assets/img/card172.jpg' },
+    { img: './../../assets/img/card42.jpg' },
+    { img: './../../assets/img/carousel89.jpg' },
+    { img: './../../assets/img/card282.jpg' },
   ];
-
 
   slides: any = [[]];
 
