@@ -1,82 +1,129 @@
-<!--Main Navigation-->
+<!--Double navigation-->
 <header>
 
-  <!-- Sidebar -->
-  <mdb-side-nav #sidenav class="sidebar-fixed position-fixed" [fixed]="true">
-    <a class="logo-wrapper waves-effect">
-      <img src="../../../../assets/img/angular-mdb.png" class="img-fluid" alt="">
-    </a>
+  <!-- Sidebar navigation -->
+  <mdb-side-nav #sidenav class="sn-bg-1" [fixed]="false">
 
-    <li>
-      <ul class="collapsible collapsible-accordion">
-        <mdb-accordion [multiple]="false" aria-multiselectable="false">
+    <mdb-navbar-brand>
+      <li>
+        <div class="logo-wrapper waves-light">
+          <a href="#">
+            <img src="https://mdbootstrap.com/img/logo/mdb-transparent.png" class="img-fluid flex-center">
+          </a>
+        </div>
+      </li>
+      <!--/. Logo -->
+    </mdb-navbar-brand>
 
-          <!-- Simple link -->
-          <mdb-accordion-item class="no-collase">
-            <mdb-accordion-item-head mdbWavesEffect>
-              <i class="far fa-hand-pointer"></i> Menu Principal
-            </mdb-accordion-item-head>
-            <mdb-accordion-item-body></mdb-accordion-item-body>
-          </mdb-accordion-item>
+    <links>
+      <!--Social-->
+      <li>
+        <ul class="social">
+          <li>
+            <a class="icons-sm fb-ic">
+              <i class="fab fa-facebook-f"> </i>
+            </a>
+          </li>
+          <li>
+            <a class="icons-sm pin-ic">
+              <i class="fab fa-pinterest"> </i>
+            </a>
+          </li>
+          <li>
+            <a class="icons-sm gplus-ic">
+              <i class="fab fa-google-plus"> </i>
+            </a>
+          </li>
+          <li>
+            <a class="icons-sm tw-ic">
+              <i class="fab fa-twitter"> </i>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <!--/Social-->
+      <!--Search Form-->
+      <li>
+        <form class="search-form" role="search">
+          <div class="form-group md-form mt-0 pt-1 waves-light" mdbWavesEffect>
+            <input type="text" class="form-control" placeholder="Search">
+          </div>
+        </form>
+      </li>
+      <!--/.Search Form-->
+      <!-- Side navigation links -->
+      <li>
+        <ul class="collapsible collapsible-accordion">
+          <mdb-accordion [multiple]="false" aria-multiselectable="false">
 
-          <!-- Simple link -->
-          <mdb-accordion-item class="no-collase">
-            <mdb-accordion-item-head mdbWavesEffect>
-              <i class="far fa-hand-pointer"></i> Inicio
-            </mdb-accordion-item-head>
-            <mdb-accordion-item-body></mdb-accordion-item-body>
-          </mdb-accordion-item>
+            <!-- Simple link -->
+            <mdb-accordion-item class="no-collase">
+              <mdb-accordion-item-head mdbWavesEffect>
+                <i class="far fa-hand-pointer"></i> Menu Principal
+              </mdb-accordion-item-head>
+              <mdb-accordion-item-body></mdb-accordion-item-body>
+            </mdb-accordion-item>
 
-          <!-- Simple link -->
-          <mdb-accordion-item class="no-collase">
-            <mdb-accordion-item-head mdbWavesEffect>
-              <i class="far fa-hand-pointer"></i> Noticias
-            </mdb-accordion-item-head>
-            <mdb-accordion-item-body></mdb-accordion-item-body>
-          </mdb-accordion-item>
+            <!-- Simple link -->
+            <mdb-accordion-item class="no-collase">
+              <mdb-accordion-item-head mdbWavesEffect>
+                <i class="far fa-hand-pointer"></i> Inicio
+              </mdb-accordion-item-head>
+              <mdb-accordion-item-body></mdb-accordion-item-body>
+            </mdb-accordion-item>
 
-          <!-- Simple link -->
-          <mdb-accordion-item class="no-collase">
-            <mdb-accordion-item-head mdbWavesEffect>
-              <i class="far fa-gem"></i> Lo mas Top
-            </mdb-accordion-item-head>
-            <mdb-accordion-item-body></mdb-accordion-item-body>
-          </mdb-accordion-item>
-        <!-- Simple link -->
-        <mdb-accordion-item class="no-collase">
-            <mdb-accordion-item-head mdbWavesEffect>
-              <i class="far fa-gem"></i> Usuario
-            </mdb-accordion-item-head>
-            <mdb-accordion-item-body></mdb-accordion-item-body>
-          </mdb-accordion-item>
-        <!-- Simple link -->
-        <mdb-accordion-item class="no-collase">
-            <mdb-accordion-item-head mdbWavesEffect>
-              <i class="far fa-gem"></i> Perfil
-            </mdb-accordion-item-head>
-            <mdb-accordion-item-body></mdb-accordion-item-body>
-          </mdb-accordion-item>
-        <!-- Simple link -->
-        <mdb-accordion-item class="no-collase">
-            <mdb-accordion-item-head mdbWavesEffect>
-              <i class="far fa-gem"></i> Subir cancion
-            </mdb-accordion-item-head>
-            <mdb-accordion-item-body></mdb-accordion-item-body>
-          </mdb-accordion-item>
-        <!-- Simple link -->
-        <mdb-accordion-item class="no-collase">
-            <mdb-accordion-item-head mdbWavesEffect>
-              <i class="far fa-gem"></i> Cerrar Sesion
-            </mdb-accordion-item-head>
-            <mdb-accordion-item-body></mdb-accordion-item-body>
-          </mdb-accordion-item>
+            <!-- Simple link -->
+            <mdb-accordion-item class="no-collase">
+              <mdb-accordion-item-head mdbWavesEffect>
+                <i class="far fa-hand-pointer"></i> Noticias
+              </mdb-accordion-item-head>
+              <mdb-accordion-item-body></mdb-accordion-item-body>
+            </mdb-accordion-item>
 
-        </mdb-accordion>
-      </ul>
-    </li>
+            <!-- Simple link -->
+            <mdb-accordion-item class="no-collase">
+              <mdb-accordion-item-head mdbWavesEffect>
+                <i class="far fa-gem"></i> Lo mas Top
+              </mdb-accordion-item-head>
+              <mdb-accordion-item-body></mdb-accordion-item-body>
+            </mdb-accordion-item>
+            <!-- Simple link -->
+            <mdb-accordion-item class="no-collase">
+              <mdb-accordion-item-head mdbWavesEffect>
+                <i class="far fa-gem"></i> Usuario
+              </mdb-accordion-item-head>
+              <mdb-accordion-item-body></mdb-accordion-item-body>
+            </mdb-accordion-item>
+            <!-- Simple link -->
+            <mdb-accordion-item class="no-collase">
+              <mdb-accordion-item-head mdbWavesEffect>
+                <i class="far fa-gem"></i> Perfil
+              </mdb-accordion-item-head>
+              <mdb-accordion-item-body></mdb-accordion-item-body>
+            </mdb-accordion-item>
+            <!-- Simple link -->
+            <mdb-accordion-item class="no-collase">
+              <mdb-accordion-item-head mdbWavesEffect>
+                <i class="far fa-gem"></i> Subir cancion
+              </mdb-accordion-item-head>
+              <mdb-accordion-item-body></mdb-accordion-item-body>
+            </mdb-accordion-item>
+            <!-- Simple link -->
+            <mdb-accordion-item class="no-collase">
+              <mdb-accordion-item-head mdbWavesEffect>
+                <i class="far fa-gem"></i> Cerrar Sesion
+              </mdb-accordion-item-head>
+              <mdb-accordion-item-body></mdb-accordion-item-body>
+            </mdb-accordion-item>
 
+          </mdb-accordion>
+        </ul>
+      </li>
+      <!--/. Side navigation links -->
+    </links>
+    <div class="sidenav-bg mask-strong"></div>
   </mdb-side-nav>
-  <!-- Sidebar -->
+  <!--/. Sidebar navigation -->
 
   <!-- Navbar -->
   <mdb-navbar SideClass="navbar fixed-top navbar-toggleable-md navbar-expand-lg scrolling-navbar double-nav"
@@ -85,37 +132,40 @@
     <navlinks class="navbar-container">
       <!-- SideNav slide-out button -->
       <div class="float-left">
-        <a (click)="sidenav.show()" class="button-collapse"><i class="fas fa-bars"></i></a>
+        <a (click)="sidenav.toggle()" class="button-collapse hidden-nav-button-collapse">
+          <i class="fas fa-bars"></i>
+        </a>
       </div>
       <!--/. SideNav slide-out button -->
     </navlinks>
 
     <mdb-navbar-brand>
       <!-- Breadcrumb-->
-      <div class="breadcrumbs breadcrumb-dn mr-auto">
+      <div class="breadcrumbs breadcrumbs-hidden-nav breadcrumb-dn mr-auto">
         <p>Material Design for Bootstrap</p>
       </div>
       <!--/. Breadcrumb-->
     </mdb-navbar-brand>
+
 
     <navlinks>
       <ul class="nav navbar-nav nav-flex-icons ml-auto ie-double-nav">
         <li class="nav-item">
           <app-login></app-login>
         </li>
-        <li class="nav-item">
-          <app-login></app-login>
-        </li>
+
       </ul>
     </navlinks>
+
   </mdb-navbar>
   <!--/. Navbar -->
 
 </header>
-<!--Main Navigation-->
+<!--/.Double navigation-->
+
 <!--Main Layout-->
 <main>
-  <div class="container-fluid ">
+  <div class="container-fluid mt-5">
     <app-main-page></app-main-page>
   </div>
 </main>
