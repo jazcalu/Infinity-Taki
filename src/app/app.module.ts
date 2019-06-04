@@ -6,6 +6,8 @@ import { HttpModule } from '@angular/http';
 import { AgmCoreModule } from '@agm/core';
 import { AppComponent } from './app.component';
 
+import { CarouselModule, WavesModule } from 'ng-uikit-pro-standard'
+
 import { MDBSpinningPreloader, MDBBootstrapModulesPro, ToastModule } from 'ng-uikit-pro-standard';
 import { MdbTakiModule } from './mdb-taki.module';
 import { HeaderComponent } from './components/header/header.component';
@@ -73,7 +75,8 @@ import { FileUploadComponent } from './components/file-upload/file-upload.compon
     }),
     MdbTakiModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CarouselModule, WavesModule
   ],
   providers: [MDBSpinningPreloader],
   bootstrap: [AppComponent],
