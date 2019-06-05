@@ -1,15 +1,104 @@
-<mdb-carousel [isControls]="false" class="carousel-multi-item multi-animation mt-5" [type]="'carousel-multi-item'"
-              [animation]="'slide'">
-  <mdb-carousel-item *ngFor="let item of slides; let i = index">
-    <div class="col-md-4" [ngClass]="{'d-none d-md-block': cardIndex !== 0}"
-         *ngFor="let card of item; let cardIndex = index">
-      <mdb-card class="my-1">
-        <mdb-card-img [src]="card.img" alt="Card image cap"></mdb-card-img>
+<section class="pb-3 text-center ">
 
-
-      </mdb-card>
+    <!--Section heading-->
+    <h2 class="h1 py-5 cyan-text">Los más escuchados</h2>
+    <!--Section description--> 
+    <!--Grid row-->
+    <div class="row">
+      <!--Grid column-->
+      <div class="col-lg-3 col-md-6 mb-4">
+  
+        <!--Collection card-->
+        <mdb-card class="collection-card z-depth-1-half">
+          <!--Card image-->
+          <div class="view zoom waves-light" mdbWavesEffect>
+            <mdb-card-img src="./../../assets/img/card303.jpg" alt=""></mdb-card-img>
+            <div class="stripe dark">
+              <a>
+                <p>JeanL - Red 
+                  <i class="fas fa-angle-right"></i>
+                </p>
+              </a>
+            </div>
+          </div>
+          <!--Card image-->
+        </mdb-card>
+        <!--Collection card-->
+  
+      </div>
+      <!--Grid column-->
+  
+      <!--Grid column-->
+      <div class="col-lg-3 col-md-6 mb-4">
+  
+        <!--Collection card-->
+        <mdb-card class="collection-card z-depth-1-half">
+          <!--Card image-->
+          <div class="view zoom waves-light" mdbWavesEffect>
+            <mdb-card-img src="./../../assets/img/card242.jpg"  alt=""></mdb-card-img>
+            <div class="stripe light">
+              <a>
+                <p>DjMax - Suave
+                  <i class="fas fa-angle-right"></i>
+                </p>
+              </a>
+            </div>
+          </div>
+          <!--Card image-->
+        </mdb-card>
+        <!--Collection card-->
+  
+      </div>
+      <!--Grid column-->
+  
+      <!--Grid column-->
+      <div class="col-lg-3 col-md-6 mb-4">
+  
+        <!--Collection card-->
+        <mdb-card class="collection-card z-depth-1-half">
+          <!--Card image-->
+          <div class="view zoom waves-light" mdbWavesEffect>
+            <mdb-card-img src="./../../assets/img/card42.jpg" alt=""></mdb-card-img>
+            <div class="stripe dark">
+              <a>
+                <p>H2 - Amor
+                  <i class="fas fa-angle-right"></i>
+                </p>
+              </a>
+            </div>
+          </div>
+          <!--Card image-->
+        </mdb-card>
+        <!--Collection card-->
+  
+      </div>
+      <!--Grid column-->
+  
+      <!--Fourth column-->
+      <div class="col-lg-3 col-md-6 mb-4">
+  
+        <!--Collection card-->
+        <mdb-card class="collection-card z-depth-1-half">
+          <!--Card image-->
+          <div class="view zoom waves-light" mdbWavesEffect>
+            <mdb-card-img src="./../../assets/img/card152.jpg" alt=""></mdb-card-img>
+            <div class="stripe light">
+              <a>
+                <p>Luna - Yo
+                  <i class="fas fa-angle-right"></i>
+                </p>
+              </a>
+            </div>
+          </div>
+          <!--Card image-->
+        </mdb-card>
+        <!--Collection card-->
+  
+      </div>
+      <!--Fourth column-->
+  
     </div>
-  </mdb-carousel-item>
-</mdb-carousel>
-
-
+    <!--Grid row-->
+  
+  </section>
+  <!--Section: Products v.4-->
