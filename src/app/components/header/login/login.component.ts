@@ -8,8 +8,16 @@ import { FormControl, Validators } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
-  modalFormDarkEmail = new FormControl('', Validators.email);
-  modalFormDarkPassword = new FormControl('', Validators.required);
+  ObjUsuario = {
+    usu_nom: '',
+    usu_ape: '',
+    usu_nomArt: '',
+    usu_email: '',
+    usu_pass: ''
+  }
+
+  // modalFormDarkEmail = new FormControl('', Validators.email);
+  // modalFormDarkPassword = new FormControl('', Validators.required);
 
   constructor() { }
 

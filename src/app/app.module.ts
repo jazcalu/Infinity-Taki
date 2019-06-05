@@ -17,7 +17,6 @@ import { MainPageComponent } from './components/main-page/main-page.component';
 import { CarouselComponent } from './components/main-page/carousel/carousel.component';
 import { NewMusicComponent } from './components/main-page/new-music/new-music.component';
 import { NewEventsComponent } from './components/main-page/new-events/new-events.component';
-import { RegisterComponent } from './components/register/register.component';
 import { UserContentComponent } from './components/user-content/user-content.component';
 import { OldPostComponent } from './components/user-content/old-post/old-post.component';
 import { NewPostComponent } from './components/user-content/new-post/new-post.component';
@@ -45,7 +44,6 @@ import { CardsFreeModule, ButtonsModule } from 'ng-uikit-pro-standard'
     CarouselComponent,
     NewMusicComponent,
     NewEventsComponent,
-    RegisterComponent,
     UserContentComponent,
     OldPostComponent,
     NewPostComponent,
