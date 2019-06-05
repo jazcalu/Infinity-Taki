@@ -33,7 +33,7 @@ import { ArtistNewsComponent } from './components/profile/artist-news/artist-new
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FileUploadComponent } from './components/file-upload/file-upload.component';
-
+import { CardsFreeModule, ButtonsModule } from 'ng-uikit-pro-standard'
 
 @NgModule({
   declarations: [
@@ -76,7 +76,10 @@ import { FileUploadComponent } from './components/file-upload/file-upload.compon
     MdbTakiModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    CarouselModule, WavesModule
+    CarouselModule,
+    WavesModule,
+    CardsFreeModule,
+    ButtonsModule
   ],
   providers: [MDBSpinningPreloader],
   bootstrap: [AppComponent],
