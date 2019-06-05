@@ -1,4 +1,4 @@
-import { Component, OnInit, Renderer2 } from '@angular/core';
+import {AfterViewInit, Component, OnInit, Renderer2} from '@angular/core';
 
 @Component({
   selector: 'app-new-music',
@@ -18,6 +18,7 @@ export class NewMusicComponent implements OnInit {
     { img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg' },
     { img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg' },
   ];
+
 
   slides: any = [[]];
 
