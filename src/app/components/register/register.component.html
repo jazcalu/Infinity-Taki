@@ -20,25 +20,25 @@
                 <!--Body-->
                 <div class="md-form">
                     <i class="fas fa-user prefix grey-text"></i>
-                    <input mdbInput type="text" id="form1" class="form-control">
+                    <input mdbInput type="text" id="form1" class="form-control" [(ngModel)]="ObjUsuario.usu_nom">
                     <label data-error="wrong" data-success="right" for="form1">Nombre</label>
                 </div>
 
                 <div class="md-form">
                   <i class="fas fa-user prefix grey-text"></i>
-                  <input mdbInput type="text" id="form2" class="form-control">
+                  <input mdbInput type="text" id="form2" class="form-control" [(ngModel)]="ObjUsuario.usu_ape">
                   <label data-error="wrong" data-success="right" for="form2">Apellido</label>
               </div>
 
               <div class="md-form">
                 <i class="fas fa-user prefix grey-text"></i>
-                <input mdbInput type="text" id="form3" class="form-control">
+                <input mdbInput type="text" id="form3" class="form-control" [(ngModel)]="ObjUsuario.usu_nomArt">
                 <label data-error="wrong" data-success="right" for="form3">Nickname </label>
             </div>
 
                 <div class="md-form">
                     <i class="fas fa-envelope prefix grey-text"></i>
-                    <input mdbInput type="text" id="form4" class="form-control">
+                    <input mdbInput type="text" id="form4" class="form-control" [(ngModel)]="ObjUsuario.usu_email">
                     <label data-error="wrong" data-success="right" for="form4">Tu email</label>
                 </div>
 
@@ -55,7 +55,7 @@
                     <!-- <input mdbInput type="password" id="form26" class="form-control" [formControl]="modalFormRegisterRepeatPassword"> -->
                     <label data-error="wrong" data-success="right" for="form26">Repite tu password</label>
                     <div class="form-group mt-4">
-                        <input class="form-check-input" type="checkbox" id="checkbox624">
+                        <input class="form-check-input" type="checkbox" id="checkbox624" [(ngModel)]="ObjUsuario.usu_pass">
                         <label for="checkbox624" class="form-check-label cyan-text">Acepto
                             <a href="#" class="cyan-text font-weight-bold"> los Terminos y Condiciones</a>
                         </label>
@@ -74,7 +74,7 @@
                 </div>
 
                 <div class="text-center">
-                    <button mdbBtn class="waves-light" rounded="true" mdbWavesEffect style="background-color:#0BE9B6; color: white">Registrar</button>
+                    <button mdbBtn class="waves-light" rounded="true" mdbWavesEffect style="background-color:#0BE9B6; color: white" (click)="createUser()">Registrar</button>
                 </div>
 
             </mdb-card-body>
