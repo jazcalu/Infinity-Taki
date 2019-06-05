@@ -2,7 +2,7 @@
 <header>
 
   <!-- Sidebar navigation -->
-  <mdb-side-nav #sidenav class="sn-bg-1" [fixed]="false">
+  <mdb-side-nav #sidenav class="sn-bg-1" [fixed]="true">
 
     <mdb-navbar-brand>
       <li>
@@ -57,9 +57,9 @@
           <mdb-accordion [multiple]="false" aria-multiselectable="false">
 
             <!-- Simple link -->
-            <mdb-accordion-item class="no-collase">
+            <mdb-accordion-item class="no-collase" [routerLink]="['/main']" routerLinkActive="router-link-active"  >
               <mdb-accordion-item-head mdbWavesEffect>
-                <i class="far fa-hand-pointer"></i> Menu Principal
+                Menu Principal
               </mdb-accordion-item-head>
               <mdb-accordion-item-body></mdb-accordion-item-body>
             </mdb-accordion-item>
@@ -90,7 +90,7 @@
             <!-- Simple link -->
             <mdb-accordion-item class="no-collase">
               <mdb-accordion-item-head mdbWavesEffect>
-                <i class="far fa-gem"></i> Usuario
+                Usuario
               </mdb-accordion-item-head>
               <mdb-accordion-item-body></mdb-accordion-item-body>
             </mdb-accordion-item>
@@ -142,7 +142,7 @@
     <mdb-navbar-brand>
       <!-- Breadcrumb-->
       <div class="breadcrumbs breadcrumbs-hidden-nav breadcrumb-dn mr-auto">
-        <p>Material Design for Bootstrap</p>
+        <p>Login de Taki</p>
       </div>
       <!--/. Breadcrumb-->
     </mdb-navbar-brand>
@@ -150,9 +150,9 @@
 
     <navlinks>
       <ul class="nav navbar-nav nav-flex-icons ml-auto ie-double-nav">
-        <li class="nav-item">
-          <app-login></app-login>
-        </li>
+        <div class="chip mt-2">
+          <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-6.jpg" alt="Contact Person"> Jane Doe
+        </div>
 
       </ul>
     </navlinks>
@@ -165,8 +165,9 @@
 
 <!--Main Layout-->
 <main>
-  <div class="container-fluid mt-5">
-    <app-main-page></app-main-page>
+  <div class="container-fluid ">
+    <router-outlet></router-outlet>
+
   </div>
 </main>
 <!--/Main layout-->
