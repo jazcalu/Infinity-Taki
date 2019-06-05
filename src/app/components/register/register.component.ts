@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-register',
@@ -7,6 +8,12 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
+
+  modalFormDarkName = new FormControl('', Validators.required);
+  modalFormDarkLastName = new FormControl('', Validators.required);
+  modalFormDarkNickName = new FormControl('', Validators.required);
+  modalFormDarkEmail = new FormControl('', Validators.email);
+  modalFormDarkPassword = new FormControl('', Validators.required);
 
   ObjUsuario = {
     usu_nom: '',

@@ -1,86 +1,93 @@
+<button type="button" mdbBtn color="default" rounded="true" data-toggle="modal" data-target="#basicExample"
+  (click)="frame.show()" mdbWavesEffect>Launch Modal</button>
 
-<div class="row d-flex justify-content-center">
+<div mdbModal #frame="mdbModal" class="modal fade top" id="frameModalTop" tabindex="-1" role="dialog"
+  aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog form-dark" #frmRegisterUser="ngForm" role="document" (ngSubmit)="createUser(frmRegisterUser)">
+    <!--Content-->
+    <div class="modal-content card card-image" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/pricing-table%20(7).jpg');">
+      <div class="text-white rgba-stylish-strong py-5 px-5 z-depth-4">
+        <!--Header-->
+        <div class="modal-header text-center pb-4">
+          <h3 class="modal-title w-100 white-text font-weight-bold" id="myModalLabel">
+            <strong>SIGN</strong>
+            <a class="green-text font-weight-bold">
+              <strong> UP</strong>
+            </a>
+          </h3>
+          <button type="button" class="close white-text" data-dismiss="modal" aria-label="Close" (click)="frame.hide()">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <!--Body-->
+        <div class="modal-body">
+          <!--Body-->
+          <div class="md-form mb-5">
+            <input type="text" id="Form-email5" class="form-control white-text" mdbInput
+              [formControl]="modalFormDarkName" [(ngModel)]="ObjUsuario.usu_nom">
+            <label data-error="wrong" data-success="right" for="Form-email5">Nombres</label>
+          </div>
 
-    <!--Grid column-->
-    <div class="col-lg-5 my-4" >
+          <div class="md-form mb-5">
+              <input type="text" id="Form-email5" class="form-control white-text" mdbInput
+                [formControl]="modalFormDarkLastName" [(ngModel)]="ObjUsuario.usu_ape">
+              <label data-error="wrong" data-success="right" for="Form-email5">Apellidos</label>
+          </div>
 
-        <!--Form with header-->
-        <mdb-card>
+          <div class="md-form mb-5">
+              <input type="text" id="Form-email5" class="form-control white-text" mdbInput
+                [formControl]="modalFormDarkNickName" [(ngModel)]="ObjUsuario.usu_nomArt">
+              <label data-error="wrong" data-success="right" for="Form-email5">NickName</label>
+          </div>
 
-            <mdb-card-body>
-                <!--Header-->
-                <div class="form-header cyan accent-5">
-                    <h3>
-                        <i class='fas fa-user mr-1'></i>Regístrate</h3>
-                </div>
+          <div class="md-form mb-5">
+              <input type="text" id="Form-email5" class="form-control white-text" mdbInput
+                [formControl]="modalFormDarkEmail" [(ngModel)]="ObjUsuario.usu_nomArt">
+              <label data-error="wrong" data-success="right" for="Form-email5">Email</label>
+          </div>
 
-                <p style="font-size: 14px">Sé parte de la comunidad peruana de artistas independientes</p>
-                <br>
-
-                <!--Body-->
-                <div class="md-form">
-                    <i class="fas fa-user prefix grey-text"></i>
-                    <input mdbInput type="text" id="form1" class="form-control" [(ngModel)]="ObjUsuario.usu_nom">
-                    <label data-error="wrong" data-success="right" for="form1">Nombre</label>
-                </div>
-
-                <div class="md-form">
-                  <i class="fas fa-user prefix grey-text"></i>
-                  <input mdbInput type="text" id="form2" class="form-control" [(ngModel)]="ObjUsuario.usu_ape">
-                  <label data-error="wrong" data-success="right" for="form2">Apellido</label>
-              </div>
-
-              <div class="md-form">
-                <i class="fas fa-user prefix grey-text"></i>
-                <input mdbInput type="text" id="form3" class="form-control" [(ngModel)]="ObjUsuario.usu_nomArt">
-                <label data-error="wrong" data-success="right" for="form3">Nickname </label>
+          <div class="md-form pb-3">
+            <input type="password" id="Form-pass5" class="form-control white-text" mdbInput
+              [formControl]="modalFormDarkPassword">
+            <label data-error="wrong" data-success="right" for="Form-pass5">Password</label>
+            <div class="form-group mt-4">
+              <input class="form-check-input" type="checkbox" id="checkbox624">
+              <label for="checkbox624" class="white-text form-check-label">Accept the
+                <a href="#" class="green-text font-weight-bold"> Terms and Conditions</a>
+              </label>
             </div>
+          </div>
 
-                <div class="md-form">
-                    <i class="fas fa-envelope prefix grey-text"></i>
-                    <input mdbInput type="text" id="form4" class="form-control" [(ngModel)]="ObjUsuario.usu_email">
-                    <label data-error="wrong" data-success="right" for="form4">Tu email</label>
-                </div>
+          <!--Grid row-->
+          <div class="row d-flex align-items-center mb-4">
 
-                <div class="md-form form-sm">
-                    <i class="fas fa-lock prefix"></i>
-                    <input mdbInput type="password" id="form25" class="form-control">
-                    <!-- <input mdbInput type="password" id="form25" class="form-control" [formControl]="modalFormRegisterPassword"> -->
-                    <label data-error="wrong" data-success="right" for="form25">Tu password</label>
-                </div>
+            <!--Grid column-->
+            <div class="text-center mb-3 col-md-12">
+              <button type="button" mdbBtn color="success" block="true" rounded="true" class="z-depth-1 waves-light"
+                mdbWavesEffect>Sign up</button>
+            </div>
+            <!--Grid column-->
 
-                <div class="md-form form-sm">
-                    <i class="fas fa-lock prefix"></i>
-                    <input mdbInput type="password" id="form26" class="form-control">
-                    <!-- <input mdbInput type="password" id="form26" class="form-control" [formControl]="modalFormRegisterRepeatPassword"> -->
-                    <label data-error="wrong" data-success="right" for="form26">Repite tu password</label>
-                    <div class="form-group mt-4">
-                        <input class="form-check-input" type="checkbox" id="checkbox624" [(ngModel)]="ObjUsuario.usu_pass">
-                        <label for="checkbox624" class="form-check-label cyan-text">Acepto
-                            <a href="#" class="cyan-text font-weight-bold"> los Terminos y Condiciones</a>
-                        </label>
-                    </div>
-                </div>
-                <div>
-                    <p style="text-align: center">ó Registrate iniciando sesión en:</p>
-                    <div class="row my-3 d-flex justify-content-center">
-                        <!--Facebook-->
-                        <a type="button" mdbBtn floating="true" size="lg" class="btn-fb waves-light" mdbWavesEffect><i
-                                class="fab fa-facebook-f"></i></a>
-                        <!--Google-->
-                        <a type="button" mdbBtn floating="true" size="lg" class=" btn-gplus waves-light"
-                            mdbWavesEffect><i class="fab fa-google-plus"></i></a>
-                    </div>
-                </div>
+          </div>
+          <!--Grid row-->
 
-                <div class="text-center">
-                    <button mdbBtn class="waves-light" rounded="true" mdbWavesEffect style="background-color:#0BE9B6; color: white" (click)="createUser()">Registrar</button>
-                </div>
+          <!--Grid row-->
+          <div class="row">
 
-            </mdb-card-body>
+            <!--Grid column-->
+            <div class="col-md-12">
+              <p class="font-small white-text d-flex justify-content-end">Ya estas registrado?
+                <a href="#" class="green-text ml-1 font-weight-bold"> Log in</a>
+              </p>
+            </div>
+            <!--Grid column-->
 
-        </mdb-card>
-        <!--Form with header-->
+          </div>
+          <!--Grid row-->
 
+        </div>
+      </div>
     </div>
-    <!--Grid column-->
+    <!--/.Content-->
+  </div>
+</div>
