@@ -1,5 +1,5 @@
 {
-    "name": "ng-uikit-pro-standard-lib",
+    "name": "Taki",
     "version": "7.5.3",
     "license": "SEE LICENSE IN <license.pdf>",
     "scripts": {
@@ -12,7 +12,7 @@
         "remove-demo-unix": "rm -rf projects && rm angular.json && mv angular-clean.json angular.json",
         "remove-demo-windows": "rmdir /s /q projects && del angular.json && ren angular-clean.json angular.json"
     },
-    "//": "git+https://oauth2:zFmxZsyzPzCviEUYZ51c@git.mdbootstrap.com/mdb/angular/ng-uikit-pro-standard.git",
+    "//": "git+https://oauth2:-----@git.mdbootstrap.com/mdb/angular/ng-uikit-pro-standard.git",
     "private": true,
     "dependencies": {
         "@agm/core": "^1.0.0-beta.3",

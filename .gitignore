@@ -40,6 +40,8 @@ Thumbs.db
 
 # Gitignore
 /projects
-/ng-uikit-pro-standard-7.5.3
-/package-lock
-/package
+ng-uikit-pro-standard-7.5.3
+package-lock
+package
+ng-uikit-pro-standard-7.5.3.tgz
+package-lock.json
