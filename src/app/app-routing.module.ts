@@ -10,13 +10,13 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 
 export const routes: Routes = [
   {
-    path: 'main',
+    path: '',
     component: MainPageComponent
   },
-  {
-    path: 'perfil',
-    component: ProfileComponent
-  },
+  // {
+  //   path: 'perfil',
+  //   component: ProfileComponent
+  // },
   {
     path: 'tops',
     component: MusicContentComponent
@@ -25,10 +25,10 @@ export const routes: Routes = [
     path: 'news',
     component: UserContentComponent
   },
-  {
-    path: 'upload',
-    component: FileUploadComponent
-  },
+  // {
+  //   path: 'upload',
+  //   component: FileUploadComponent
+  // },
   {
     path: '**',
     component: PageNotFoundComponent
