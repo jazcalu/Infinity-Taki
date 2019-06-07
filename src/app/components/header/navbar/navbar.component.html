@@ -25,11 +25,6 @@
             </a>
           </li>
           <li>
-            <a class="icons-sm pin-ic">
-              <i class="fab fa-pinterest"> </i>
-            </a>
-          </li>
-          <li>
             <a class="icons-sm gplus-ic">
               <i class="fab fa-google-plus"> </i>
             </a>
@@ -67,7 +62,7 @@
             <!-- Simple link -->
             <mdb-accordion-item class="no-collase" [routerLink]="['']">
               <mdb-accordion-item-head mdbWavesEffect>
-                <i class="far fa-hand-pointer"></i> Inicio
+                <i class="fas fa-home"></i> Inicio
               </mdb-accordion-item-head>
               <mdb-accordion-item-body></mdb-accordion-item-body>
             </mdb-accordion-item>
@@ -75,15 +70,15 @@
             <!-- Simple link -->
             <mdb-accordion-item class="no-collase" [routerLink]="['/news']">
               <mdb-accordion-item-head mdbWavesEffect>
-                <i class="far fa-hand-pointer"></i> Noticias
+                <i class="fas fa-newspaper"></i> Noticias
               </mdb-accordion-item-head>
               <mdb-accordion-item-body></mdb-accordion-item-body>
             </mdb-accordion-item>
 
             <!-- Simple link -->
-            <mdb-accordion-item class="no-collase"  [routerLink]="['/tops']">
+            <mdb-accordion-item class="no-collase" [routerLink]="['/tops']">
               <mdb-accordion-item-head mdbWavesEffect>
-                <i class="far fa-gem"></i> Lo mas Top
+                <i class="fas fa-heart"></i> Lo mas Top
               </mdb-accordion-item-head>
               <mdb-accordion-item-body></mdb-accordion-item-body>
             </mdb-accordion-item>
@@ -95,23 +90,23 @@
               <mdb-accordion-item-body></mdb-accordion-item-body>
             </mdb-accordion-item>
             <!-- Simple link -->
-            <mdb-accordion-item class="no-collase"  [routerLink]="['/perfil']">
+            <mdb-accordion-item class="no-collase" [routerLink]="['/perfil']">
               <mdb-accordion-item-head mdbWavesEffect>
-                <i class="far fa-gem"></i> Perfil
+                <i class="fas fa-user-circle"></i> Perfil
               </mdb-accordion-item-head>
               <mdb-accordion-item-body></mdb-accordion-item-body>
             </mdb-accordion-item>
             <!-- Simple link -->
             <mdb-accordion-item class="no-collase" [routerLink]="['/upload']">
               <mdb-accordion-item-head mdbWavesEffect>
-                <i class="far fa-gem"></i> Subir cancion
+                <i class="fas fa-cloud-upload-alt"></i>Subir cancion
               </mdb-accordion-item-head>
               <mdb-accordion-item-body></mdb-accordion-item-body>
             </mdb-accordion-item>
             <!-- Simple link -->
             <mdb-accordion-item class="no-collase">
               <mdb-accordion-item-head mdbWavesEffect>
-                <i class="far fa-gem"></i> Cerrar Sesion
+                <i class="fas fa-sign-out-alt"></i> Cerrar Sesion
               </mdb-accordion-item-head>
               <mdb-accordion-item-body></mdb-accordion-item-body>
             </mdb-accordion-item>
@@ -142,23 +137,28 @@
     <mdb-navbar-brand>
       <!-- Breadcrumb-->
       <div class="breadcrumbs breadcrumbs-hidden-nav breadcrumb-dn mr-auto">
-          <a class="navbar-brand" href="#">
-              <img src="./../../assets/img/takilogo.png" height="33" class="float-center" alt="">
-          </a>
+        <a class="navbar-brand" href="#">
+          <img src="./../../assets/img/takilogo.png" height="33" class="float-center" alt="">
+        </a>
       </div>
       <!--/. Breadcrumb-->
     </mdb-navbar-brand>
 
-
-    <navlinks>
-      <ul class="nav navbar-nav nav-flex-icons ml-auto ie-double-nav">
-        <div class="chip mt-2">
-          <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-6.jpg" alt="Contact Person"> Jane Doe
-        </div>
-
+    <links>
+      <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown" dropdown>
+              <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+                <mdb-icon fas icon="user"></mdb-icon>
+                <span class="caret"></span></a>
+              <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary dropdowm-menu-right" role="menu">
+                <a class="dropdown-item waves-light" mdbWavesEffect href="#">Action</a>
+              </div>
+          </li>
+          <a id="navbar-static-login" class="btn btn-info btn-rounded btn-sm waves-effect waves-light" data-toggle="modal" data-target="#navbarLogin">Log In
+              <i class="fas fa-sign-in-alt ml-2"></i>
+          </a>
       </ul>
-    </navlinks>
-
+    </links>
   </mdb-navbar>
   <!--/. Navbar -->
 
