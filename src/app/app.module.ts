@@ -8,6 +8,9 @@ import { AppComponent } from './app.component';
 
 import { CarouselModule, WavesModule } from 'ng-uikit-pro-standard'
 
+// firebase
+import { environment } from '../environments/environment';
+
 import { MDBSpinningPreloader, MDBBootstrapModulesPro, ToastModule } from 'ng-uikit-pro-standard';
 import { MdbTakiModule } from './mdb-taki.module';
 import { HeaderComponent } from './components/header/header.component';
@@ -33,7 +36,11 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { AppRoutingModule } from './app-routing.module';
 import { FileUploadComponent } from './components/file-upload/file-upload.component';
 import { CardsFreeModule, ButtonsModule } from 'ng-uikit-pro-standard';
+<<<<<<< HEAD
 import { ModalComponent } from './components/header/modal/modal.component';
+=======
+import { RegistroComponent } from './components/header/registro/registro.component'
+>>>>>>> d6a3ecf12c6199d467a1cb415147950dc6c0069a
 
 @NgModule({
   declarations: [
@@ -59,7 +66,11 @@ import { ModalComponent } from './components/header/modal/modal.component';
     ArtistNewsComponent,
     PageNotFoundComponent,
     FileUploadComponent,
+<<<<<<< HEAD
     ModalComponent,
+=======
+    RegistroComponent,
+>>>>>>> d6a3ecf12c6199d467a1cb415147950dc6c0069a
 
   ],
   imports: [

@@ -1,5 +1,4 @@
-<button type="button" mdbBtn color="success" outline="true" rounded="true" data-toggle="modal" data-target="#mdbModal"
-  (click)="frame.show()" mdbWavesEffect>Login</button>
+<button type="button" mdbBtn color="success" outline="true" rounded="true" data-toggle="modal" data-target="#mdbModal" (click)="frame.show()" mdbWavesEffect>Registro</button>
 
 <div mdbModal #frame="mdbModal" class="modal fade top" id="frameModalTop" role="dialog" aria-labelledby="myModalLabel"
   aria-hidden="true">
@@ -22,17 +21,35 @@
         </div>
         <!--Body-->
         <div class="modal-body">
+          <!--Body-->
+          <div class="md-form mb-5">
+            <input type="text" id="Nombre" class="form-control white-text" mdbInput
+              [formControl]="modalFormDarkName" [(ngModel)]="ObjUser.usu_nom">
+            <label data-error="wrong" data-success="right" for="Nombre">Nombre</label>
+          </div>
 
           <div class="md-form mb-5">
-            <input type="email" id="Form-email5" class="form-control white-text" mdbInput
-              [formControl]="modalFormDarkEmail" >
-            <label data-error="wrong" data-success="right" for="Form-email5">Email</label>
+            <input type="text" id="Apellidos" class="form-control white-text" mdbInput
+              [formControl]="modalFormDarkLastName" [(ngModel)]="ObjUser.usu_ape">
+            <label data-error="wrong" data-success="right" for="Apellidos">Apellido</label>
+          </div>
+
+          <div class="md-form mb-5">
+            <input type="text" id="Form-email3" class="form-control white-text" mdbInput
+              [formControl]="modalFormDarkNickName" [(ngModel)]="ObjUser.usu_nomArt">
+            <label data-error="wrong" data-success="right" for="Form-email3">NickName</label>
+          </div>
+          <div class="md-form mb-5">
+            <input type="email" id="Form-email4" class="form-control white-text" mdbInput
+              [formControl]="modalFormDarkEmail" [(ngModel)]="ObjUser.usu_email" name="email">
+            <label data-error="wrong" data-success="right" for="Form-email4">Email</label>
+
           </div>
 
           <div class="md-form pb-3">
-            <input type="password" id="Form-pass5" class="form-control white-text" mdbInput
-              [formControl]="modalFormDarkPassword" >
-            <label data-error="wrong" data-success="right" for="Form-pass5">Password</label>
+            <input type="password" id="Form-pass6" class="form-control white-text" mdbInput
+              [formControl]="modalFormDarkPassword" [(ngModel)]="ObjUser.usu_pass">
+            <label data-error="wrong" data-success="right" for="Form-pass6">Password</label>
             <div class="form-group mt-4">
               <input class="form-check-input" type="checkbox" id="checkbox624">
               <label for="checkbox624" class="white-text form-check-label">Accept the
@@ -47,7 +64,9 @@
             <!--Grid column-->
             <div class="text-center mb-3 col-md-12">
               <button type="button" mdbBtn color="success" block="true" rounded="true" class="z-depth-1 waves-light"
-                mdbWavesEffect (click)="onLogin()">Sign up</button>
+                mdbWavesEffect
+                (click)="RegisterUser()"
+                >Registrate</button>
             </div>
             <!--Grid column-->
 

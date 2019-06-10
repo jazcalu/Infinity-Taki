@@ -52,7 +52,7 @@
           <mdb-accordion [multiple]="false" aria-multiselectable="false">
 
             <!-- Simple link -->
-            <mdb-accordion-item class="no-collase" [routerLink]="['/main']" routerLinkActive="router-link-active">
+            <mdb-accordion-item class="no-collase" [routerLink]="['']" routerLinkActive="router-link-active">
               <mdb-accordion-item-head mdbWavesEffect>
                 Menu Principal
               </mdb-accordion-item-head>
@@ -60,7 +60,7 @@
             </mdb-accordion-item>
 
             <!-- Simple link -->
-            <mdb-accordion-item class="no-collase" [routerLink]="['/main']">
+            <mdb-accordion-item class="no-collase" [routerLink]="['']">
               <mdb-accordion-item-head mdbWavesEffect>
                 <i class="fas fa-home"></i> Inicio
               </mdb-accordion-item-head>
@@ -82,8 +82,12 @@
               </mdb-accordion-item-head>
               <mdb-accordion-item-body></mdb-accordion-item-body>
             </mdb-accordion-item>
+          </mdb-accordion>
+        </ul>
+        <ul class="collapsible collapsible-accordion" *ngIf="authService.logged">
+          <mdb-accordion [multiple]="false" aria-multiselectable="false">
             <!-- Simple link -->
-            <mdb-accordion-item class="no-collase" [routerLink]="['/register']">
+            <mdb-accordion-item class="no-collase" [routerLink]="['/perfil']">
               <mdb-accordion-item-head mdbWavesEffect>
                 Usuario
               </mdb-accordion-item-head>
@@ -104,7 +108,7 @@
               <mdb-accordion-item-body></mdb-accordion-item-body>
             </mdb-accordion-item>
             <!-- Simple link -->
-            <mdb-accordion-item class="no-collase">
+            <mdb-accordion-item class="no-collase" (click)="LogOut()">
               <mdb-accordion-item-head mdbWavesEffect>
                 <i class="fas fa-sign-out-alt"></i> Cerrar Sesion
               </mdb-accordion-item-head>
@@ -155,6 +159,7 @@
             <a class="dropdown-item waves-light" mdbWavesEffect href="#">Action</a>
           </div>
         </li>
+<<<<<<< HEAD
 
         <li class="nav-item">
 
@@ -164,6 +169,12 @@
           </a>
         </li>
 
+=======
+        <a id="navbar-static-login" class="btn btn-info btn-rounded btn-sm waves-effect waves-light" data-toggle="modal"
+          data-target="#navbarLogin">Log In
+          <i class="fas fa-sign-in-alt ml-2"></i>
+        </a>
+>>>>>>> d6a3ecf12c6199d467a1cb415147950dc6c0069a
       </ul>
     </links>
   </mdb-navbar>
