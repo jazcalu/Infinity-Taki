@@ -4,7 +4,16 @@
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebaseConfig : {
+    apiKey: "AIzaSyCL7n1_n7Xu5gm3o37vZwA5OLL0Q1l0nXQ",
+    authDomain: "infinity-taki.firebaseapp.com",
+    databaseURL: "https://infinity-taki.firebaseio.com",
+    projectId: "infinity-taki",
+    storageBucket: "infinity-taki.appspot.com",
+    messagingSenderId: "645769346101",
+    appId: "1:645769346101:web:4e0b8a2310a1756a"
+  }
 };
 
 /*

@@ -8,6 +8,9 @@ import { AppComponent } from './app.component';
 
 import { CarouselModule, WavesModule } from 'ng-uikit-pro-standard'
 
+// firebase
+import { environment } from '../environments/environment';
+
 import { MDBSpinningPreloader, MDBBootstrapModulesPro, ToastModule } from 'ng-uikit-pro-standard';
 import { MdbTakiModule } from './mdb-taki.module';
 import { HeaderComponent } from './components/header/header.component';

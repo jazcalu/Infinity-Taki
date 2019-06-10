@@ -7,16 +7,18 @@ import { MusicContentComponent } from './components/music-content/music-content.
 import { UserContentComponent } from './components/user-content/user-content.component';
 import { FileUploadComponent } from './components/file-upload/file-upload.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { AuthGuardGuard } from './guard/auth-guard.guard';
 
 export const routes: Routes = [
   {
     path: '',
     component: MainPageComponent
   },
-  // {
-  //   path: 'perfil',
-  //   component: ProfileComponent
-  // },
+  {
+    path: 'perfil',
+    component: ProfileComponent,
+    canActivate: [AuthGuardGuard]
+  },
   {
     path: 'tops',
     component: MusicContentComponent
@@ -25,10 +27,11 @@ export const routes: Routes = [
     path: 'news',
     component: UserContentComponent
   },
-  // {
-  //   path: 'upload',
-  //   component: FileUploadComponent
-  // },
+  {
+    path: 'upload',
+    component: FileUploadComponent,
+    canActivate: [AuthGuardGuard]
+  },
   {
     path: '**',
     component: PageNotFoundComponent
