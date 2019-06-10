@@ -16,6 +16,12 @@ export class AuthService {
     this.IsLogged();
   }
 
+  RegisterUser(ObjUser) {
+    const URL = 'http://localhost:3600/api/usuario/create';
+    return this.http.post(URL, ObjUser)
+
+  }
+
   IsLogged(){
     if( this.logged === true ) {
       return true;
@@ -23,11 +29,11 @@ export class AuthService {
     return false;
   }
 
-  LogingUser(ObjUsuario) {
+  LogingUser(ObjUser) {
     // const URL = 'http://172.23.11.119:3000/api/usuario/create';
-    const URL = 'http://172.23.11.119:3000/api/usuario';
+    const URL = 'http://localhost:3600/api/usuario';
     this.logged = true
-    return this.http.post(URL, ObjUsuario)
+    return this.http.post(URL, ObjUser)
 
   }
 

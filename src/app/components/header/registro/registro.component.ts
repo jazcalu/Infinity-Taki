@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { FormControl, Validators } from '@angular/forms';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-registro',
@@ -15,7 +16,7 @@ export class RegistroComponent implements OnInit {
   modalFormDarkEmail = new FormControl('', Validators.email);
   modalFormDarkPassword = new FormControl('', Validators.required);
 
-  ObjUsuario = {
+  ObjUser = {
     usu_nom: '',
     usu_ape: '',
     usu_nomArt: '',
@@ -23,19 +24,19 @@ export class RegistroComponent implements OnInit {
     usu_pass: ''
   }
 
-  URL = 'http://172.23.11.119:3000/api/usuario/create';
-
-  constructor(private http: HttpClient) { }
+  constructor(private authService: AuthService) { }
 
   ngOnInit() {
   }
 
-  createUser() {
-    this.http.post(this.URL,this.ObjUsuario)
-      .subscribe(data =>{
+  RegisterUser() {
+    this.authService.RegisterUser(this.ObjUser)
+      .subscribe(data => {
         console.log(data)
+        return true;
       }, error => {
         console.log(error)
+        return false;
       })
   }
 }

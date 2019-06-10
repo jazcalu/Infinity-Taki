@@ -13,8 +13,6 @@ export class NavbarComponent implements OnInit {
   ngOnInit() {
   }
 
-
-
   LogOut() {
     this.authService.LogOut()
   }
