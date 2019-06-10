@@ -28,10 +28,10 @@ export class LoginComponent implements OnInit {
   onLogin() {
     this.authService.LogingUser(this.ObjUsuario).subscribe(respuesta => {
         console.log(respuesta);
-        return true
+        return true;
       },error => {
-        console.log(error)
-        return false
+        console.log(error);
+        return false;
       })
   }
 }
