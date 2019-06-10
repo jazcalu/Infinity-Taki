@@ -1,17 +1,17 @@
-<button type="button" mdbBtn color="success" outline="true" rounded="true" data-toggle="modal" data-target="#mdbModal" (click)="frame.show()" mdbWavesEffect>Registro</button>
+<button type="button" mdbBtn color="primary" gradient="aqua" rounded="true" data-toggle="modal" data-target="#mdbModal" (click)="frame.show()" mdbWavesEffect size="sm">Regístrate</button>
 
-<div mdbModal #frame="mdbModal" class="modal fade top" id="frameModalTop" role="dialog" aria-labelledby="myModalLabel"
-  aria-hidden="true">
+<div mdbModal #frame="mdbModal" class="modal fade"  tabindex="-1"  id="ModalRegistro" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true" >
   <div class="modal-dialog form-dark" role="document">
     <!--Content-->
     <div class="modal-content card card-image"
-      style="background-image: url('https://mdbootstrap.com/img/Photos/Others/pricing-table%20(7).jpg');">
+      style="background-image: url('https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(66).jpg');">
       <div class="text-white rgba-stylish-strong py-5 px-5 z-depth-4">
         <!--Header-->
         <div class="modal-header text-center pb-4">
           <h3 class="modal-title w-100 white-text font-weight-bold" id="myModalLabel">
             <strong>Registro</strong>
-            <a class="green-text font-weight-bold">
+            <a class="cyan-text font-weight-bold">
               <strong> Taki</strong>
             </a>
           </h3>
@@ -20,26 +20,26 @@
           </button>
         </div>
         <!--Body-->
-        <div class="modal-body">
+        <div class="modal-body mb-0 p-0">
           <!--Body-->
-          <div class="md-form mb-5">
+          <div class="md-form mb-2">
             <input type="text" id="Nombre" class="form-control white-text" mdbInput
               [formControl]="modalFormDarkName" [(ngModel)]="ObjUser.usu_nom">
             <label data-error="wrong" data-success="right" for="Nombre">Nombre</label>
           </div>
 
-          <div class="md-form mb-5">
+          <div class="md-form mb-2">
             <input type="text" id="Apellidos" class="form-control white-text" mdbInput
               [formControl]="modalFormDarkLastName" [(ngModel)]="ObjUser.usu_ape">
             <label data-error="wrong" data-success="right" for="Apellidos">Apellido</label>
           </div>
 
-          <div class="md-form mb-5">
+          <div class="md-form mb-2">
             <input type="text" id="Form-email3" class="form-control white-text" mdbInput
               [formControl]="modalFormDarkNickName" [(ngModel)]="ObjUser.usu_nomArt">
             <label data-error="wrong" data-success="right" for="Form-email3">NickName</label>
           </div>
-          <div class="md-form mb-5">
+          <div class="md-form mb-2">
             <input type="email" id="Form-email4" class="form-control white-text" mdbInput
               [formControl]="modalFormDarkEmail" [(ngModel)]="ObjUser.usu_email" name="email">
             <label data-error="wrong" data-success="right" for="Form-email4">Email</label>
@@ -51,19 +51,19 @@
               [formControl]="modalFormDarkPassword" [(ngModel)]="ObjUser.usu_pass">
             <label data-error="wrong" data-success="right" for="Form-pass6">Password</label>
             <div class="form-group mt-4">
-              <input class="form-check-input" type="checkbox" id="checkbox624">
-              <label for="checkbox624" class="white-text form-check-label">Accept the
-                <a href="#" class="green-text font-weight-bold"> Terms and Conditions</a>
+              <input class="form-check-input" type="checkbox" id="checkbox625">
+              <label for="checkbox625" class="white-text form-check-label">Accept the
+                <a href="#" class="cyan-text font-weight-bold"> Terms and Conditions</a>
               </label>
             </div>
           </div>
 
           <!--Grid row-->
-          <div class="row d-flex align-items-center mb-4">
+          <div class="row d-flex align-items-center mb-3">
 
             <!--Grid column-->
-            <div class="text-center mb-3 col-md-12">
-              <button type="button" mdbBtn color="success" block="true" rounded="true" class="z-depth-1 waves-light"
+            <div class="text-center mb-2 col-md-12">
+              <button type="button" mdbBtn color="primary" block="true" rounded="true" class="z-depth-1 waves-light"
                 mdbWavesEffect
                 (click)="RegisterUser()"
                 >Registrate</button>
@@ -78,8 +78,8 @@
 
             <!--Grid column-->
             <div class="col-md-12">
-              <p class="font-small white-text d-flex justify-content-end">Have an account?
-                <a href="#" class="green-text ml-1 font-weight-bold"> Log in</a>
+              <p class="font-small white-text d-flex justify-content-end">Tienes una cuenta?
+                <a href="#" class="cyan-text ml-1 font-weight-bold"> Inicia Sesión</a>
               </p>
             </div>
             <!--Grid column-->
