@@ -32,7 +32,8 @@ import { ArtistNewsComponent } from './components/profile/artist-news/artist-new
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FileUploadComponent } from './components/file-upload/file-upload.component';
-import { CardsFreeModule, ButtonsModule } from 'ng-uikit-pro-standard'
+import { CardsFreeModule, ButtonsModule } from 'ng-uikit-pro-standard';
+import { ModalComponent } from './components/header/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -58,6 +59,7 @@ import { CardsFreeModule, ButtonsModule } from 'ng-uikit-pro-standard'
     ArtistNewsComponent,
     PageNotFoundComponent,
     FileUploadComponent,
+    ModalComponent,
 
   ],
   imports: [
@@ -79,6 +81,7 @@ import { CardsFreeModule, ButtonsModule } from 'ng-uikit-pro-standard'
     CardsFreeModule,
     ButtonsModule
   ],
+  entryComponents: [ ModalComponent ],
   providers: [MDBSpinningPreloader],
   bootstrap: [AppComponent],
   schemas:      [ NO_ERRORS_SCHEMA ]
