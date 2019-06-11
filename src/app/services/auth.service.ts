@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router';
 
 @Injectable({
@@ -17,7 +17,7 @@ export class AuthService {
   }
 
   RegisterUser(ObjUser) {
-    const URL = 'http://localhost:3600/api/usuario/create';
+    const URL = 'http://localhost:3000/api/usuario/create';
     return this.http.post(URL, ObjUser)
 
   }
@@ -31,8 +31,10 @@ export class AuthService {
 
   LogingUser(ObjUser) {
     // const URL = 'http://172.23.11.119:3000/api/usuario/create';
-    const URL = 'http://localhost:3600/api/usuario';
+    // let headers = new HttpHeaders().set('Content-Type', 'application/json');
+    const URL = 'http://localhost:3000/api/login';
     this.logged = true
+    console.log("Estamos ready")
     return this.http.post(URL, ObjUser)
 
   }

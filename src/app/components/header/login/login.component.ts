@@ -10,10 +10,12 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class LoginComponent implements OnInit {
 
-  ObjUsuario = {
-    usu_email: '',
-    usu_pass: ''
-  };
+
+  objUser ={
+    email: '',
+    password: ''
+  }
+
 
   modalFormDarkEmail = new FormControl('', Validators.email);
   modalFormDarkPassword = new FormControl('', Validators.required);
@@ -26,12 +28,12 @@ export class LoginComponent implements OnInit {
 
 
   onLogin() {
-    this.authService.LogingUser(this.ObjUsuario).subscribe(respuesta => {
+    console.log(this.objUser);
+    this.authService.LogingUser(this.objUser).subscribe(respuesta => {
         console.log(respuesta);
-        return true;
+
       },error => {
         console.log(error);
-        return false;
       })
   }
 }
