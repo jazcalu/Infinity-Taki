@@ -31,10 +31,10 @@ export class LoginComponent implements OnInit {
     console.log(this.objUser);
     this.authService.LogingUser(this.objUser).subscribe(respuesta => {
       console.log(respuesta)
-        if(respuesta.uid && respuesta.message === 'Ok'){
-          console.log(respuesta.uid)
-          console.log("pasamos ")
-        }
+        // if(respuesta.uid ){
+        //   console.log(respuesta.uid)
+        //   console.log("pasamos ")
+        // }
 
       },error => {
         console.log(error);

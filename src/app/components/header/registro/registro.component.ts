@@ -17,11 +17,11 @@ export class RegistroComponent implements OnInit {
   modalFormDarkPassword = new FormControl('', Validators.required);
 
   ObjUser = {
-    usu_nom: '',
-    usu_ape: '',
-    usu_nomArt: '',
-    usu_email: '',
-    usu_pass: ''
+    nombre: '',
+    apellido: '',
+    nomArtistico: '',
+    email: '',
+    password: ''
   }
 
   constructor(private authService: AuthService) { }
@@ -33,10 +33,8 @@ export class RegistroComponent implements OnInit {
     this.authService.RegisterUser(this.ObjUser)
       .subscribe(data => {
         console.log(data)
-        return true;
       }, error => {
         console.log(error)
-        return false;
       })
   }
 }

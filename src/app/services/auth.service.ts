@@ -44,11 +44,11 @@ export class AuthService {
     this.router.navigateByUrl('');
   }
 
-  SaveToken(uid){
-    localStorage.setItem('uid', uid);
-    this.uid = uid
-    this.GetUserDetails();
-  }
+  // SaveToken(uid){
+  //   localStorage.setItem('uid', uid);
+  //   this.uid = uid
+  //   this.GetUserDetails();
+  // }
 
   GetUserDetails(){
 
