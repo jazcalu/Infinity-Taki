@@ -20,11 +20,11 @@ export class RegistroComponent implements OnInit {
   registroNull:Boolean
 
   ObjUser = {
-    usu_nom: '',
-    usu_ape: '',
-    usu_nomArt: '',
-    usu_email: '',
-    usu_pass: ''
+    nombre: '',
+    apellido: '',
+    nomArtistico: '',
+    email: '',
+    password: ''
   }
 
   constructor(private authService: AuthService, private ruto:Router) { }
@@ -33,8 +33,8 @@ export class RegistroComponent implements OnInit {
   }
 
   RegisterUser() {
-    if(this.ObjUser.usu_nom != '' && this.ObjUser.usu_ape != '' && this.ObjUser.usu_nomArt != '' &&
-       this.ObjUser.usu_email != '' && this.ObjUser.usu_pass != ''){
+    if(this.ObjUser.nombre != '' && this.ObjUser.apellido != '' && this.ObjUser.nomArtistico != '' &&
+       this.ObjUser.email != '' && this.ObjUser.password != ''){
         this.authService.RegisterUser(this.ObjUser)
         .subscribe(data => {
           console.log(data)

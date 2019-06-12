@@ -18,8 +18,8 @@ export class AuthService {
 
   RegisterUser(ObjUser) {
     const URL = 'http://localhost:3000/api/usuario/create';
+    console.log(ObjUser)
     return this.http.post(URL, ObjUser)
-
   }
 
   IsLogged(){
@@ -43,4 +43,15 @@ export class AuthService {
     this.logged = false;
     this.router.navigateByUrl('');
   }
+
+  // SaveToken(uid){
+  //   localStorage.setItem('uid', uid);
+  //   this.uid = uid
+  //   this.GetUserDetails();
+  // }
+
+  GetUserDetails(){
+
+  }
 }
+
