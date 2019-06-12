@@ -46,18 +46,22 @@ export class AuthService {
     this.logged = false;
     this.router.navigateByUrl('');
     localStorage.removeItem('uid');
+    localStorage.removeItem('data');
+
 
   }
 
-  SaveToken(uid: string, data: any) {
+  SaveToken(uid, data){
     localStorage.setItem('uid', uid);
-    localStorage.setItem('data', data);
+    localStorage.setItem('data', JSON.stringify(data));
 
     this.uid = uid;
   }
 
-  GetUserDetails() {
-    // this.data = data;
+// tslint:disable-next-line: one-line
+  GetUserDetails(){
+    const user = localStorage.getItem('data');
+    return user;
   }
 }
 

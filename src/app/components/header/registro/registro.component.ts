@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { FormControl, Validators } from '@angular/forms';
 import { AuthService } from 'src/app/services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-registro',
@@ -16,6 +17,8 @@ export class RegistroComponent implements OnInit {
   modalFormDarkEmail = new FormControl('', Validators.email);
   modalFormDarkPassword = new FormControl('', Validators.required);
 
+  registroNull: boolean;
+
   ObjUser = {
     nombre: '',
     apellido: '',
@@ -24,17 +27,32 @@ export class RegistroComponent implements OnInit {
     password: ''
   };
 
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService, private ruto: Router) { }
 
   ngOnInit() {
   }
 
   RegisterUser() {
-    this.authService.RegisterUser(this.ObjUser)
-      .subscribe(data => {
-        console.log(data);
-      }, error => {
-        console.log(error);
-      });
+    if (this.ObjUser.nombre !== '' && this.ObjUser.apellido !== '' && this.ObjUser.nomArtistico !== '' &&
+      this.ObjUser.email !== '' && this.ObjUser.password !== '') {
+      this.authService.RegisterUser(this.ObjUser)
+        .subscribe(data => {
+          console.log(data);
+          this.registroNull = false;
+          // this.ruto.navigate(['/news'])
+          return true;
+        }, error => {
+          console.log(error)
+          this.ruto.navigateByUrl('/news')
+          return false;
+        })
+    } else {
+      this.registroNull = true;
+      console.log('Faltan datos');
+    }
+
+
   }
 }
+
+
