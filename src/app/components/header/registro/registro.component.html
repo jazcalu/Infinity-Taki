@@ -6,7 +6,7 @@
     <!--Content-->
     <div class="modal-content card card-image"
       style="background-image: url('https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(66).jpg');">
-      <div class="text-white rgba-stylish-strong py-5 px-5 z-depth-4">
+      <div class="text-white rgba-stylish-strong py-3 px-3 z-depth-2">
         <!--Header-->
         <div class="modal-header text-center pb-4">
           <h3 class="modal-title w-100 white-text font-weight-bold" id="myModalLabel">
@@ -59,14 +59,17 @@
           </div>
 
           <!--Grid row-->
-          <div class="row d-flex align-items-center mb-3">
+          <div class="row d-flex align-items-center mb-5">
 
             <!--Grid column-->
-            <div class="text-center mb-2 col-md-12">
-              <button type="button" mdbBtn color="primary" block="true" rounded="true" class="z-depth-1 waves-light"
+            <div class="text-center mb-5 col-md-12">
+                <span class="help-block" style="color: red" *ngIf="registroNull">Verifique que todos los campos sean correctos</span>
+
+                <button type="button" mdbBtn color="primary" block="true" rounded="true" class="z-depth-1 waves-light"
                 mdbWavesEffect
                 (click)="RegisterUser()"
                 >Registrate</button>
+      
             </div>
             <!--Grid column-->
 
@@ -77,11 +80,6 @@
           <div class="row">
 
             <!--Grid column-->
-            <div class="col-md-12">
-              <p class="font-small white-text d-flex justify-content-end">Tienes una cuenta?
-                <a href="#" class="cyan-text ml-1 font-weight-bold"> Inicia Sesión</a>
-              </p>
-            </div>
             <!--Grid column-->
 
           </div>

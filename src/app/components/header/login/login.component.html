@@ -10,7 +10,7 @@
         <!--Header-->
         <div class="modal-header text-center pb-4">
           <h3 class="modal-title w-100 white-text font-weight-bold" id="myModalLabel">
-            <strong>Registro</strong>
+            <strong>Login</strong>
             <a class="cyan-text font-weight-bold">
               <strong> Taki</strong>
             </a>
@@ -25,17 +25,19 @@
           <div class="md-form mb-5">
             <input type="email" id="Form-email5" class="form-control white-text" mdbInput
               [formControl]="modalFormDarkEmail" [(ngModel)]="objUser.email">
+              <span class="help-block" *ngIf="objUser.email == ''">*Campo requerido</span>
             <label data-error="wrong" data-success="right" for="Form-email5">Email</label>
           </div>
 
           <div class="md-form pb-3">
             <input type="password" id="Form-pass5" class="form-control white-text" mdbInput
               [formControl]="modalFormDarkPassword" [(ngModel)]="objUser.password">
+              <span class="help-block" *ngIf="objUser.password == ''">*Campo requerido</span>
             <label data-error="wrong" data-success="right" for="Form-pass5">Password</label>
             <div class="form-group mt-4">
               <input class="form-check-input" type="checkbox" id="checkbox624">
-              <label for="checkbox624" class="white-text form-check-label">Accept the
-                <a href="#" class="cyan-text font-weight-bold"> Terms and Conditions</a>
+              <label for="checkbox624" class="white-text form-check-label">Acepta los
+                <a href="#" class="cyan-text font-weight-bold"> Terminos y condiciones</a>
               </label>
             </div>
           </div>
@@ -48,6 +50,7 @@
               <button type="button" mdbBtn color="primary" block="true" rounded="true" class="z-depth-1 waves-light"
                 mdbWavesEffect (click)="onLogin()">Iniciar Sesión</button>
             </div>
+            <span *ngIf="camposNull" style="color:red">Verifique los campos</span>
             <!--Grid column-->
 
           </div>
