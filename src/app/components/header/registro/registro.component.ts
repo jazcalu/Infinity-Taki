@@ -22,7 +22,7 @@ export class RegistroComponent implements OnInit {
     nomArtistico: '',
     email: '',
     password: ''
-  }
+  };
 
   constructor(private authService: AuthService) { }
 
@@ -32,9 +32,9 @@ export class RegistroComponent implements OnInit {
   RegisterUser() {
     this.authService.RegisterUser(this.ObjUser)
       .subscribe(data => {
-        console.log(data)
+        console.log(data);
       }, error => {
-        console.log(error)
-      })
+        console.log(error);
+      });
   }
 }
