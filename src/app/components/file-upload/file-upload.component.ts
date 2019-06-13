@@ -2,12 +2,21 @@ import { Component, EventEmitter } from '@angular/core';
 import { UploadFile, UploadInput, UploadOutput } from 'ng-uikit-pro-standard';
 import { humanizeBytes } from 'ng-uikit-pro-standard';
 
+
 @Component({
   selector: 'app-file-upload',
   templateUrl: './file-upload.component.html',
   styleUrls: ['./file-upload.component.scss']
 })
 export class FileUploadComponent  {
+
+  objArtista = {
+    Artista:'',
+    Titulo:'',
+    Genero:'',
+    Cover:''
+    
+  }
 
   formData: FormData;
   files: UploadFile[];
@@ -32,6 +41,15 @@ export class FileUploadComponent  {
       return files;
    }
 
+   probando(){
+     if(this.objArtista.Artista != '' && this.objArtista.Titulo != '' && this.objArtista.Genero != ''){
+      this.startUpload()
+     }else{
+       console.log("No se cumplen los requisitos para validar el formulario!!");
+       
+     }
+   }
+
   startUpload(): void {
       const event: UploadInput = {
       type: 'uploadAll',
@@ -41,6 +59,8 @@ export class FileUploadComponent  {
       };
       this.files = [];
       this.uploadInput.emit(event);
+      console.log(this.objArtista);
+      
   }
 
   cancelUpload(id: string): void {
