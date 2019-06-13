@@ -37,7 +37,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { FileUploadComponent } from './components/file-upload/file-upload.component';
 import { CardsFreeModule, ButtonsModule } from 'ng-uikit-pro-standard';
 import { RegistroComponent } from './components/header/registro/registro.component';
-import { NewCommentComponent } from './components/profile/new-comment/new-comment.component'
+import { NewCommentComponent } from './components/profile/new-comment/new-comment.component';
+
 
 @NgModule({
   declarations: [
