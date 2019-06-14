@@ -14,7 +14,7 @@
 
           <!-- Header -->
           <h3 class="mt-4" style="color:white"><i class="fas fa-cloud-upload-alt" aria-hidden="true"
-              style="color:white"></i> Sube una Canción</h3>
+              style="color:white"></i>Sube una Canción</h3>
 
           <!-- Grid row -->
           <div class="row">
@@ -22,7 +22,8 @@
             <!-- Grid column -->
             <div class="col-md-6">
               <div class="md-form mb-0">
-                <input type="text" id="form-contact-artista" class="form-control" mdbInput>
+                <input type="text" id="form-contact-artista" class="form-control" mdbInput [(ngModel)]='objArtista.Artista'>
+                <span style="color: white" class="help-block" *ngIf="objArtista.Artista == ''">Campo obligatorio</span>
                 <label for="form-contact-artista" class="">Artista</label>
               </div>
             </div>
@@ -31,7 +32,8 @@
             <!-- Grid column -->
             <div class="col-md-6">
               <div class="md-form mb-0">
-                <input type="text" id="form-contact-titulo" class="form-control" mdbInput>
+                <input type="text" id="form-contact-titulo" class="form-control" mdbInput [(ngModel)]='objArtista.Titulo'>
+                <span style="color: white" class="help-block" *ngIf="objArtista.Titulo == ''">Campo obligatorio</span>
                 <label for="form-contact-titulo" class="">Título</label>
               </div>
             </div>
@@ -46,7 +48,8 @@
             <!-- Grid column -->
             <div class="col-md-6">
               <div class="md-form mb-0">
-                <input type="text" id="form-contact-genero" class="form-control" mdbInput>
+                <input type="text" id="form-contact-genero" class="form-control" mdbInput [(ngModel)]='objArtista.Genero'>
+                <span  style="color: white" class="help-block" *ngIf="objArtista.Genero == ''">Campo obligatorio</span>
                 <label for="form-contact-genero" class="">Genero</label>
               </div>
             </div>
@@ -55,8 +58,8 @@
             <!-- Grid column -->
             <div class="col-md-6">
               <div class="md-form mb-0">
-                <select class="browser-default custom-select">
-                  <option selected>¿Es Original o Cover?</option>
+                  <select [(ngModel)]='objArtista.Cover' class="browser-default custom-select">
+                  <option selected="selected">¿Original o Cover?</option>
                   <option value="1">Original</option>
                   <option value="2">Cover</option>
                 </select>
@@ -78,7 +81,7 @@
                   </div>
                 </div>
                 <button mdbBtn type="button" rounded="true" style="background-color:#0BE9B6; color: white"
-                  (click)="startUpload()" mdbWavesEffect>Sube tu Canción</button>
+                  (click)="probando()" mdbWavesEffect>Sube tu Canción</button>
               </form>
               <div class="form-group mt-1">
                 <input class="form-check-input" type="checkbox" id="checkbox624">
