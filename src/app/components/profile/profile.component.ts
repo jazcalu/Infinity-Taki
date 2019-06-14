@@ -15,10 +15,10 @@ export class ProfileComponent implements OnInit {
   }
 
   User() {
-    this.authservice.GetUserDetails().subscribe((data)=> {
-      this.user = data
-    })
-
+  //   this.authservice.GetUserDetails().subscribe((data)=> {
+  //     this.user = data
+  //   })
+  // }
 
 
 }
