@@ -7,14 +7,11 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./cover.component.scss']
 })
 export class CoverComponent implements OnInit {
-
-  constructor(private authservice: AuthService) { }
-
+  constructor(public data: AuthService) {
+  }
   ngOnInit() {
   }
 
-  GetUserDetails(){
-    this.authservice.GetUserDetails()
-  }
+
 
 }

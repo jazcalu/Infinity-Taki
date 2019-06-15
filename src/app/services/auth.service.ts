@@ -10,9 +10,11 @@ export class AuthService {
 
   public logged: boolean;
   private uid: string;
-  private data: object;
+  public user: any;
 
-  constructor(private http: HttpClient, private router: Router) { }
+  constructor(private http: HttpClient, private router: Router) {
+    this.GetUserDetails();
+   }
 
   // tslint:disable-next-line: use-life-cycle-interface
   ngOnInit() {
@@ -26,7 +28,7 @@ export class AuthService {
   }
 
   IsLogged() {
-    if (this.data) {
+    if (this.logged) {
       return true;
     }
     return false;
@@ -51,7 +53,7 @@ export class AuthService {
 
   }
 
-  SaveToken(uid, data){
+  SaveToken(uid, data) {
     localStorage.setItem('uid', uid);
     localStorage.setItem('data', JSON.stringify(data));
 
@@ -60,8 +62,7 @@ export class AuthService {
 
 // tslint:disable-next-line: one-line
   GetUserDetails(){
-    const user = localStorage.getItem('data');
-    return user;
+    this.user = JSON.parse(localStorage.getItem('data'));
   }
 }
 

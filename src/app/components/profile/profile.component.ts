@@ -15,9 +15,9 @@ export class ProfileComponent implements OnInit {
   }
 
   User() {
-  //   this.authservice.GetUserDetails().subscribe((data)=> {
-  //     this.user = data
-  //   })
+    const data = this.authservice.GetUserDetails();
+
+    return data;
   }
 
 
