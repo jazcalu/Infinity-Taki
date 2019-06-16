@@ -34,11 +34,11 @@ export class LoginComponent implements OnInit {
       console.log(this.objUser);
       this.authService.LogingUser(this.objUser).subscribe(respuesta => {
         console.log(respuesta);
-        this.authService.SaveToken(respuesta.uid,respuesta.content)
+        this.authService.SaveToken(respuesta.uid, respuesta.content)
         this.objUser.email = '',
-        this.objUser.password = '';
-      }, error => {
+          this.objUser.password = '';
         this.ruta.navigateByUrl('/news')
+      }, error => {
         console.log(error);
       })
     } else {

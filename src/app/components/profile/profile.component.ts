@@ -8,17 +8,8 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class ProfileComponent implements OnInit {
 
-  user: any;
   constructor(private authservice: AuthService) { }
 
   ngOnInit() {
   }
-
-  User() {
-    const data = this.authservice.GetUserDetails();
-
-    return data;
-  }
-
-
 }
